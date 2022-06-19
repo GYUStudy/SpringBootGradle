@@ -13,8 +13,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.0'
+    implementation 'org.springframework.data:spring-data-jpa:2.7.0'
+    implementation 'mysql:mysql-connector-java:8.0.29'
+    implementation 'org.thymeleaf:thymeleaf:3.0.15.RELEASE'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.0'
 }
 
 tasks.named('test') {
