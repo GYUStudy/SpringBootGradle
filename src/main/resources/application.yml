@@ -1,0 +1,31 @@
+Spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/board?serverTimezone=Asia/Seoul
+    username: root
+    password: Dasfreiheit0!
+
+    thymeleaf:
+      prefix: classpath:/static/
+      suffix: .html
+
+    jpa:
+      database-platform: org.hibernate.dialect.MYSQL5InnoDBDialect
+      open-in-view: false
+      show-sql: true
+      hibernate:
+        format_sql: true
+        ddl-auto: update
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              Binder: TRACE

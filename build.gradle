@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -17,9 +17,11 @@ dependencies {
     implementation 'org.springframework.data:spring-data-jpa:2.7.0'
     implementation 'mysql:mysql-connector-java:8.0.29'
     implementation 'org.thymeleaf:thymeleaf:3.0.15.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.0'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 
 tasks.named('test') {
