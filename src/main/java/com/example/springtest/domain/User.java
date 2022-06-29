@@ -1,26 +1,21 @@
 package com.example.springtest.domain;
 
-import lombok.Getter;
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-@Table(name="user")
-@Getter
+@Data
 public class User {
 
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 50, nullable = false)
-    private String email;
+    private String username;
 
-    @Column(length = 50, nullable = false)
-    private String userName;
-
-    @Column(length = 50, nullable = false)
-    private String passWord;
+    private String password;
 }
