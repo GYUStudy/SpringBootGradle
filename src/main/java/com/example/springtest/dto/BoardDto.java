@@ -1,25 +1,20 @@
-package com.example.springtest.domain;
+package com.example.springtest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="board")
-@Entity
-public class Board {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BoardDto implements Serializable {
     private Long idx;
     private String title;
     private String contents;
     private String author;
-    private LocalDateTime created_at;
+    private String created_at;
 }
